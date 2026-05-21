@@ -1,24 +1,23 @@
-import heroImage from "@/assets/hero-clinic.jpg";
+import heroImage from "@/assets/clinica-recepcao.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
+    <section className="relative min-h-[100dvh] flex items-center overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Aurabella Clínica de Estética - Ambiente premium"
+          alt="Recepção da Aurabella Clínica de Estética"
           width={1920}
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/40" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 w-full py-32">
         <div className="max-w-2xl">
-          <p className="animate-reveal text-sm md:text-base font-medium tracking-[0.25em] uppercase text-secondary mb-6">
-            Clínica de Estética Premium
+          <p className="animate-reveal text-sm md:text-base font-medium tracking-[0.25em] uppercase text-foreground/70 mb-6">
+            Clínica de Estética Avançada · Tatuapé
           </p>
           <h1 className="animate-reveal animate-reveal-delay-1 font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1] tracking-tight text-foreground mb-6">
             A beleza que{" "}
@@ -26,9 +25,9 @@ const Hero = () => {
             quem você é
           </h1>
           <p className="animate-reveal animate-reveal-delay-2 text-base md:text-lg text-muted-foreground leading-relaxed max-w-lg mb-10">
-            Tratamentos estéticos personalizados com técnicas avançadas, em um
-            ambiente acolhedor e sofisticado. Resultados naturais que elevam sua
-            confiança.
+            Tratamentos estéticos personalizados, equipamentos modernos e
+            atendimento em salas individuais. Uma experiência exclusiva, pensada
+            para o seu bem-estar.
           </p>
           <div className="animate-reveal animate-reveal-delay-3 flex flex-col sm:flex-row gap-4">
             <a
@@ -40,12 +39,10 @@ const Hero = () => {
               Agendar Avaliação
             </a>
             <a
-              href="https://wa.me/5511915966932"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="tel:+5511915966932"
               className="px-8 py-4 border border-foreground/20 text-foreground font-medium rounded-full text-center hover:bg-foreground/5 transition-all duration-300"
             >
-              Falar no WhatsApp
+              Ligar agora
             </a>
           </div>
 

@@ -37,15 +37,16 @@ const Footer = () => {
               Contato
             </h4>
             <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-primary shrink-0" />
+              <div className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-primary-foreground/60">
-                  Rua Monte Serrat, 890 – Tatuapé, SP
+                  Rua Monte Serrat, 890 – Tatuapé, SP<br />
+                  Próximo ao metrô Carrão (10 min)
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary shrink-0" />
-                <a href="https://wa.me/5511915966932" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+                <a href="tel:+5511915966932" className="text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors">
                   +55 11 91596-6932
                 </a>
               </div>
@@ -55,6 +56,9 @@ const Footer = () => {
                   @aurabellaoficial
                 </a>
               </div>
+              <p className="text-xs text-primary-foreground/40 pt-2">
+                Seg–Sex: 9h–20h · Sáb: 9h–15h
+              </p>
             </div>
           </div>
         </div>
