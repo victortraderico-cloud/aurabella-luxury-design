@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-aurabella.png";
 
 const navLinks = [
   { label: "Serviços", href: "#servicos" },
+  { label: "Estrutura", href: "#estrutura" },
   { label: "Sobre", href: "#sobre" },
   { label: "Depoimentos", href: "#depoimentos" },
   { label: "FAQ", href: "#faq" },
@@ -22,15 +24,18 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass-header py-3" : "py-5 bg-transparent"
+        scrolled ? "glass-header py-2" : "py-4 bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="font-serif text-2xl font-semibold tracking-wide text-foreground">
-          Aurabella
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Aurabella" className="h-11 w-11 object-contain" />
+          <span className="font-serif text-xl font-semibold tracking-wide text-foreground hidden sm:inline">
+            Aurabella
+          </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -51,7 +56,7 @@ const Navbar = () => {
         </nav>
 
         <button
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
@@ -60,7 +65,7 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden glass-header mt-2 mx-4 rounded-2xl p-6 animate-reveal">
+        <div className="lg:hidden glass-header mt-2 mx-4 rounded-2xl p-6 animate-reveal">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a

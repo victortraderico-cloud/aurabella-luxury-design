@@ -19,7 +19,7 @@ const faqs = [
   {
     question: "Quanto tempo dura cada sessão?",
     answer:
-      "A duração varia conforme o tratamento. Procedimentos faciais costumam durar de 40 a 90 minutos, enquanto tratamentos corporais podem levar de 60 a 120 minutos. Na avaliação inicial, informamos a duração exata.",
+      "O tempo pode variar conforme o tipo de procedimento realizado. Na avaliação inicial, informamos com clareza a duração estimada do seu protocolo, respeitando o seu conforto e bem-estar.",
   },
   {
     question: "É necessário agendar com antecedência?",

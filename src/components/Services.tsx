@@ -1,36 +1,39 @@
-import { Sparkles, Leaf, Sun, Heart, Droplets, Zap } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import procBotox from "@/assets/proc-botox.jpg";
+import procEmagrecimento from "@/assets/proc-emagrecimento.jpg";
+import procGordura from "@/assets/proc-gordura.jpg";
+import procLaser from "@/assets/proc-laser.jpg";
 
 const services = [
   {
-    icon: Sparkles,
+    image: procBotox,
+    title: "Toxina Botulínica",
+    description: "Aplicação precisa de botox para suavizar linhas de expressão com resultado natural e harmônico.",
+  },
+  {
+    image: procEmagrecimento,
+    title: "Emagrecimento",
+    description: "Protocolos personalizados para perda de peso e bem-estar, com acompanhamento dedicado.",
+  },
+  {
+    image: procGordura,
+    title: "Gordura Localizada",
+    description: "Tecnologia avançada para redução de medidas e contorno corporal definido.",
+  },
+  {
+    image: procLaser,
+    title: "Depilação a Laser",
+    description: "Equipamentos de última geração compatíveis com todos os tipos e fototipos de pele.",
+  },
+  {
+    image: procBotox,
     title: "Tratamentos Faciais",
-    description: "Limpeza de pele, peeling, microagulhamento e protocolos personalizados para cada tipo de pele.",
+    description: "Limpeza profunda, peeling, microagulhamento e protocolos sob medida para cada pele.",
   },
   {
-    icon: Leaf,
+    image: procEmagrecimento,
     title: "Tratamentos Corporais",
-    description: "Modelagem corporal, drenagem linfática e protocolos para redução de medidas e firmeza.",
-  },
-  {
-    icon: Sun,
-    title: "Rejuvenescimento",
-    description: "Bioestimuladores, toxina botulínica e ácido hialurônico para resultados naturais e harmônicos.",
-  },
-  {
-    icon: Heart,
-    title: "Cuidados com a Pele",
-    description: "Protocolos para acne, manchas, rosácea e hidratação profunda com dermocosméticos premium.",
-  },
-  {
-    icon: Droplets,
-    title: "Skincare Avançado",
-    description: "Avaliação personalizada e protocolos home care com os melhores ativos do mercado.",
-  },
-  {
-    icon: Zap,
-    title: "Tecnologias de Ponta",
-    description: "Laser, luz pulsada, radiofrequência e equipamentos de última geração para resultados superiores.",
+    description: "Drenagem linfática, modelagem corporal e protocolos para firmeza e redução.",
   },
 ];
 
@@ -58,8 +61,8 @@ const Services = () => {
             Tratamentos que <span className="italic">transformam</span>
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Cada protocolo é desenhado especialmente para você, combinando ciência, 
-            tecnologia e cuidado humano.
+            Cada protocolo é desenhado especialmente para você, combinando tecnologia
+            avançada e cuidado humano.
           </p>
         </div>
 
@@ -67,20 +70,29 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group p-8 rounded-2xl bg-card/50 border border-border/50 hover-lift cursor-default ${
+              className={`group rounded-2xl overflow-hidden bg-card border border-border/50 hover-lift ${
                 visible ? "animate-reveal" : "opacity-0"
               }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <service.icon className="w-5 h-5 text-primary" />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
-              <h3 className="font-serif text-xl font-medium text-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              <div className="p-7">
+                <h3 className="font-serif text-xl font-medium text-foreground mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
